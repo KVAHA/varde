@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nordic Energy Market Analysis — Varde</title>
+  <title>Nordic Energy Market Analysis — Nordic Mining Intelligence</title>
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -11,10 +11,16 @@
   <!-- Nav -->
   <nav class="nav">
     <a href="../index.html" class="nav-brand">
-      <span class="nav-wordmark">VARDE</span>
-      <span class="nav-subtitle">Market Intelligence</span>
+      <span class="nav-wordmark">NMI</span>
+      <span class="nav-subtitle">Nordic Mining Intelligence</span>
     </a>
-    <a href="../index.html" class="nav-back">← All Reports</a>
+    <div class="nav-links">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="../company-reports.html" class="nav-link">Company Reports</a>
+      <a href="../jurisdictions.html" class="nav-link">Jurisdictions</a>
+      <a href="../geopolitics.html" class="nav-link">Geopolitics</a>
+      <a href="../about.html" class="nav-link">About</a>
+    </div>
   </nav>
 
   <!-- Report header -->
@@ -44,18 +50,35 @@
         </p>
       </div>
 
-      <!-- Chart section -->
-      <div class="content-block" id="capacity">
-        <div class="content-label">Capacity Growth 2023–2026</div>
+      <!-- Section: Market Overview -->
+      <div class="report-section" id="overview">
+        <h2 class="report-section-heading">Market Overview</h2>
+        <p class="report-text">
+          The Nordic region continues to outpace European averages in renewable energy transition.
+          Norway's hydropower base provides a stable backbone while offshore wind expansion accelerates
+          across Danish and Swedish waters. Cross-border grid interconnectivity remains a limiting
+          factor for full market integration, though planned cable investments in 2027–2028 are
+          expected to address this bottleneck.
+        </p>
+        <p class="report-text">
+          Demand-side drivers include industrial electrification in Norway's aluminum sector and
+          rapid data center buildout in Sweden, both contributing to sustained high baseload
+          requirements through the forecast period.
+        </p>
+      </div>
+
+      <!-- Section: Capacity Data (chart) -->
+      <div class="report-section" id="capacity">
+        <h2 class="report-section-heading">Capacity Growth 2023–2026</h2>
         <div class="chart-wrap">
           <canvas id="capacityChart" height="120"></canvas>
         </div>
         <div class="chart-caption">Installed renewable capacity in GW across the Nordic region.</div>
       </div>
 
-      <!-- Data table -->
-      <div class="content-block" id="comparison">
-        <div class="content-label">Market Comparison</div>
+      <!-- Section: Market Comparison (table) -->
+      <div class="report-section" id="comparison">
+        <h2 class="report-section-heading">Market Comparison</h2>
         <div class="table-wrap">
           <table class="data-table">
             <thead>
@@ -91,20 +114,22 @@
         </div>
       </div>
 
-      <!-- Analysis text -->
-      <div class="content-block" id="analysis">
-        <div class="content-label">Analysis</div>
-        <p class="body-text">
-          The Nordic region continues to outpace European averages in renewable energy transition.
-          Norway's hydropower base provides a stable backbone while offshore wind expansion accelerates
-          across Danish and Swedish waters. Cross-border grid interconnectivity remains a limiting
-          factor for full market integration, though planned cable investments in 2027–2028 are
-          expected to address this bottleneck.
+      <!-- Section: Analysis -->
+      <div class="report-section" id="analysis">
+        <h2 class="report-section-heading">Analysis</h2>
+        <p class="report-text">
+          The structural shift toward renewables in the Nordic region is accelerating, supported
+          by favourable geography, established grid infrastructure, and strong policy frameworks
+          across Norway, Sweden, Denmark, and Finland. The energy transition has material
+          implications for Nordic mining — particularly for electro-intensive processes such as
+          smelting and refining, where cheap, clean electricity represents a competitive advantage
+          for Norwegian and Swedish operations.
         </p>
-        <p class="body-text">
-          Demand-side drivers include industrial electrification in Norway's aluminum sector and
-          rapid data center buildout in Sweden, both contributing to sustained high baseload
-          requirements through the forecast period.
+        <p class="report-text">
+          Cross-border interconnection capacity remains the primary structural constraint. While
+          planned investments are expected to improve market integration, near-term price
+          disparities between regional zones will continue to affect operational cost structures
+          for energy-intensive industries.
         </p>
       </div>
 
@@ -116,6 +141,7 @@
       <div class="sidebar-panel">
         <div class="sidebar-label">Contents</div>
         <ul class="toc-list">
+          <li><a href="#overview">Market Overview</a></li>
           <li><a href="#capacity">Capacity Growth</a></li>
           <li><a href="#comparison">Market Comparison</a></li>
           <li><a href="#analysis">Analysis</a></li>
@@ -123,10 +149,10 @@
       </div>
 
       <div class="sidebar-panel">
-        <div class="sidebar-label">Related Reports</div>
+        <div class="sidebar-label">Related</div>
         <ul class="related-list">
-          <li><a href="#">Scandinavian SaaS →</a></li>
-          <li><a href="#">Baltic Investment →</a></li>
+          <li><a href="../jurisdictions.html">Norway Jurisdiction →</a></li>
+          <li><a href="../company-reports.html">Company Reports →</a></li>
         </ul>
       </div>
 
