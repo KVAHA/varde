@@ -585,6 +585,9 @@ a { color: inherit; }
     gap: 24px;
   }
 
+  /* Hide contents list on mobile */
+  .sidebar-panel:has(.toc-list) { display: none; }
+
   /* Tables: allow horizontal scroll */
   .table-wrap { overflow-x: auto; }
 
