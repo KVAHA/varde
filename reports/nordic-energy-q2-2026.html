@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nordic Energy Market Analysis — Varde</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="../index.html" class="nav-brand">
+      <span class="nav-wordmark">VARDE</span>
+      <span class="nav-subtitle">Market Intelligence</span>
+    </a>
+    <a href="../index.html" class="nav-back">← All Reports</a>
+  </nav>
+
+  <!-- Report header -->
+  <div class="report-header">
+    <div class="tag-row">
+      <span class="tag tag-sector">Energy</span>
+      <span class="tag tag-period">Q2 2026</span>
+    </div>
+    <h1 class="report-title">Nordic Energy Market Analysis</h1>
+    <div class="report-meta">Published April 12, 2026 · 8 min read</div>
+  </div>
+
+  <!-- Report body: main content + sidebar -->
+  <div class="report-body">
+
+    <!-- Main content -->
+    <main>
+
+      <!-- Executive summary -->
+      <div class="summary-block">
+        <div class="summary-label">Executive Summary</div>
+        <p class="summary-text">
+          Nordic energy markets showed strong resilience in Q2 2026, driven by renewable
+          expansion and elevated cross-border demand. Key findings indicate a 14% year-on-year
+          increase in offshore wind capacity, with Norway leading regional growth at 42.1 GW total
+          installed capacity.
+        </p>
+      </div>
+
+      <!-- Chart section -->
+      <div class="content-block" id="capacity">
+        <div class="content-label">Capacity Growth 2023–2026</div>
+        <div class="chart-wrap">
+          <canvas id="capacityChart" height="120"></canvas>
+        </div>
+        <div class="chart-caption">Installed renewable capacity in GW across the Nordic region.</div>
+      </div>
+
+      <!-- Data table -->
+      <div class="content-block" id="comparison">
+        <div class="content-label">Market Comparison</div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Country</th>
+                <th>Capacity (GW)</th>
+                <th>YoY Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Norway</td>
+                <td>42.1</td>
+                <td class="td-accent">+18%</td>
+              </tr>
+              <tr>
+                <td>Sweden</td>
+                <td>38.7</td>
+                <td class="td-accent">+11%</td>
+              </tr>
+              <tr>
+                <td>Denmark</td>
+                <td>29.4</td>
+                <td class="td-accent">+9%</td>
+              </tr>
+              <tr>
+                <td>Finland</td>
+                <td>18.2</td>
+                <td class="td-accent">+7%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Analysis text -->
+      <div class="content-block" id="analysis">
+        <div class="content-label">Analysis</div>
+        <p class="body-text">
+          The Nordic region continues to outpace European averages in renewable energy transition.
+          Norway's hydropower base provides a stable backbone while offshore wind expansion accelerates
+          across Danish and Swedish waters. Cross-border grid interconnectivity remains a limiting
+          factor for full market integration, though planned cable investments in 2027–2028 are
+          expected to address this bottleneck.
+        </p>
+        <p class="body-text">
+          Demand-side drivers include industrial electrification in Norway's aluminum sector and
+          rapid data center buildout in Sweden, both contributing to sustained high baseload
+          requirements through the forecast period.
+        </p>
+      </div>
+
+    </main>
+
+    <!-- Sidebar -->
+    <aside>
+
+      <div class="sidebar-panel">
+        <div class="sidebar-label">Contents</div>
+        <ul class="toc-list">
+          <li><a href="#capacity">Capacity Growth</a></li>
+          <li><a href="#comparison">Market Comparison</a></li>
+          <li><a href="#analysis">Analysis</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-panel">
+        <div class="sidebar-label">Related Reports</div>
+        <ul class="related-list">
+          <li><a href="#">Scandinavian SaaS →</a></li>
+          <li><a href="#">Baltic Investment →</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Chart.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="../assets/chart-helpers.js"></script>
+  <script>
+    vardeBarChart(
+      'capacityChart',
+      ['2023', 'Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024', 'Q1 2025', 'Q2 2025', 'Q1 2026', 'Q2 2026'],
+      [88, 92, 95, 99, 103, 108, 114, 120, 128],
+      'Total Capacity (GW)'
+    );
+  </script>
+
+</body>
+</html>
