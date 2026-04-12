@@ -113,29 +113,33 @@ a { color: inherit; }
 
 /* --- Report page header --- */
 .report-header {
-  padding: 36px 32px 28px;
+  padding: 52px 48px 40px;
   border-bottom: 1px solid var(--border);
+  max-width: 1360px;
+  margin: 0 auto;
 }
-.tag-row { display: flex; gap: 8px; margin-bottom: 12px; }
+.tag-row { display: flex; gap: 8px; margin-bottom: 16px; }
 .tag {
-  font-size: 10px; padding: 3px 8px; border-radius: 3px;
+  font-size: 10px; padding: 4px 10px; border-radius: 3px;
   letter-spacing: 1px; border: 1px solid var(--border);
 }
 .tag-sector { color: var(--accent); background: #0d2a3e; }
 .tag-period  { color: var(--muted);  background: var(--panel); }
 .report-title {
-  font-size: 26px; font-weight: 700;
-  color: var(--heading); margin-bottom: 8px;
+  font-size: 34px; font-weight: 700; letter-spacing: -0.5px;
+  color: var(--heading); margin-bottom: 12px; line-height: 1.15;
 }
-.report-meta { font-size: 12px; color: var(--muted); }
+.report-meta { font-size: 13px; color: var(--muted); }
 
 /* --- Report body layout --- */
 .report-body {
-  padding: 28px 32px;
+  padding: 40px 48px;
   display: grid;
-  grid-template-columns: 1fr 260px;
-  gap: 28px;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
   align-items: start;
+  max-width: 1360px;
+  margin: 0 auto;
 }
 
 /* --- Report content components --- */
@@ -144,15 +148,19 @@ a { color: inherit; }
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
   border-radius: 4px;
-  padding: 14px 16px;
-  margin-bottom: 28px;
+  padding: 22px 24px;
+  margin-bottom: 44px;
 }
 .summary-label {
   font-size: 9px; color: var(--accent);
   letter-spacing: 2px; text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 14px;
 }
-.summary-text { font-size: 13px; color: var(--text); line-height: 1.7; }
+.summary-text {
+  font-size: 14px; color: var(--text); line-height: 1.85;
+  margin-bottom: 14px;
+}
+.summary-text:last-child { margin-bottom: 0; }
 
 .content-block { margin-bottom: 28px; }
 .content-label {
@@ -200,20 +208,20 @@ a { color: inherit; }
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 14px 16px;
-  margin-bottom: 14px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
 }
 .sidebar-label {
   font-size: 9px; color: var(--muted);
   letter-spacing: 2px; text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 .toc-list { list-style: none; }
-.toc-list li { margin-bottom: 8px; }
-.toc-list a { font-size: 12px; color: var(--muted); text-decoration: none; }
+.toc-list li { margin-bottom: 10px; }
+.toc-list a { font-size: 12px; color: var(--muted); text-decoration: none; line-height: 1.4; }
 .toc-list a:hover { color: var(--accent); }
 .related-list { list-style: none; }
-.related-list li { margin-bottom: 8px; }
+.related-list li { margin-bottom: 10px; }
 .related-list a { font-size: 12px; color: var(--accent); text-decoration: none; }
 .related-list a:hover { text-decoration: underline; }
 
@@ -237,7 +245,8 @@ a { color: inherit; }
   letter-spacing: 0.3px;
 }
 .nav-link:hover { color: var(--heading); }
-.nav-link.active { color: var(--accent); }
+.nav-link.active,
+.nav-link--active { color: var(--accent); }
 
 /* --- Hero CTA buttons --- */
 .hero-buttons { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
@@ -267,6 +276,13 @@ a { color: inherit; }
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 24px 20px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+}
+.pillar-card:hover {
+  border-color: var(--accent);
 }
 .pillar-number {
   font-size: 10px;
@@ -306,6 +322,12 @@ a { color: inherit; }
   grid-template-columns: 1fr auto;
   gap: 32px;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.featured-block:hover {
+  border-color: var(--accent);
 }
 .featured-eyebrow {
   font-size: 9px;
@@ -339,6 +361,45 @@ a { color: inherit; }
   transition: border-color 0.2s;
 }
 .featured-cta:hover { border-color: var(--accent); }
+
+/* --- Contact block --- */
+.contact-block {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.contact-block:hover { border-color: var(--accent); }
+.contact-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.contact-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.contact-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 6px;
+}
+.contact-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
 
 /* --- About / approach section --- */
 .about-section {
@@ -422,20 +483,20 @@ a { color: inherit; }
 
 /* --- Improved report template --- */
 .report-section {
-  margin-bottom: 44px;
+  margin-bottom: 52px;
 }
 .report-section-heading {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--heading);
-  margin-bottom: 16px;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
+  letter-spacing: -0.2px;
 }
 .report-text {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text);
-  line-height: 1.95;
-  margin-bottom: 18px;
-  max-width: 680px;
+  line-height: 1.9;
+  margin-bottom: 20px;
 }
