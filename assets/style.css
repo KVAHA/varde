@@ -500,3 +500,98 @@ a { color: inherit; }
   line-height: 1.9;
   margin-bottom: 20px;
 }
+
+/* ============================================================
+   RESPONSIVE — Mobile & Tablet
+   ============================================================ */
+
+/* Tablet: 2-column grids, compact header */
+@media (max-width: 860px) {
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .pillars    { grid-template-columns: repeat(2, 1fr); }
+  .report-body { padding: 28px 32px; }
+}
+
+/* Mobile: single column, stacked layouts */
+@media (max-width: 600px) {
+
+  /* Nav */
+  .nav {
+    padding: 12px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .nav-subtitle { display: none; }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+  }
+  .nav-link {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  /* Hero */
+  .hero { padding: 28px 16px 24px; }
+  .hero-title { font-size: 24px; }
+  .hero-desc { font-size: 13px; }
+  .stats { gap: 14px; flex-wrap: wrap; }
+  .hero-buttons { gap: 8px; }
+
+  /* Sections & grids */
+  .section { padding: 20px 16px; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .pillars    { grid-template-columns: 1fr; }
+
+  /* Featured block: stack CTA below text */
+  .featured-block {
+    grid-template-columns: 1fr;
+    padding: 20px 18px;
+    gap: 16px;
+  }
+  .featured-title { font-size: 18px; }
+  .featured-cta { text-align: center; }
+
+  /* Contact block */
+  .contact-block {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 18px;
+    gap: 16px;
+  }
+
+  /* About section */
+  .about-section { padding: 32px 16px; }
+  .about-points  { grid-template-columns: 1fr; }
+
+  /* Page headers */
+  .page-header { padding: 28px 16px 24px; }
+  .page-title  { font-size: 22px; }
+
+  /* Report header */
+  .report-header {
+    padding: 28px 16px 24px;
+  }
+  .report-title { font-size: 22px; }
+  .tag-row { flex-wrap: wrap; }
+
+  /* Report body: sidebar stacks below content */
+  .report-body {
+    grid-template-columns: 1fr;
+    padding: 20px 16px;
+    gap: 24px;
+  }
+
+  /* Tables: allow horizontal scroll */
+  .table-wrap { overflow-x: auto; }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 16px;
+  }
+}
